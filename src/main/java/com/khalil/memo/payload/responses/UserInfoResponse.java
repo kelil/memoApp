@@ -7,14 +7,12 @@ import org.springframework.http.ResponseCookie;
 public class UserInfoResponse {
     private Integer id;
     private String userName;
-    private String email;
     private List<String> roles;
     private ResponseCookie jwtCookie;
 
     public UserInfoResponse(Integer id, String userName, List<String> roles, ResponseCookie jwtCookie) {
         this.id = id;
         this.userName = userName;
-        this.email = email;
         this.roles = roles;
         this.jwtCookie = jwtCookie;
     }

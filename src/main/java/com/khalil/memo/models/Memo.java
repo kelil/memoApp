@@ -24,18 +24,24 @@ public class Memo {
             @JoinColumn(name = "division_id") })
     private Set<Division> cc = new HashSet<>();
 
+    @Column(columnDefinition = "TEXT")
+    private String body;
+
+    
+
     private String users;
     @ManyToOne()
     private Employee requestedBy;
     private String signiture;
 
-    public Memo(String name, String subject, Division from, Division to, Set<Division> cc, String users,
+    public Memo(String name, String subject, Division from, Division to, Set<Division> cc, String body, String users,
             Employee requestedBy, String signiture) {
         this.name = name;
         this.subject = subject;
         this.from = from;
         this.to = to;
         this.cc = cc;
+        this.body = body;
         this.users = users;
         this.requestedBy = requestedBy;
         this.signiture = signiture;
@@ -90,6 +96,14 @@ public class Memo {
 
     public void setCc(Set<Division> cc) {
         this.cc = cc;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 
     public String getUser() {

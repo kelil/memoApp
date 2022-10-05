@@ -1,8 +1,5 @@
 package com.khalil.memo.security;
 
-import com.khalil.memo.security.jwt.AuthEntryPointJwt;
-import com.khalil.memo.security.jwt.AuthTokenFilter;
-import com.khalil.memo.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +13,10 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import com.khalil.memo.security.jwt.AuthEntryPointJwt;
+import com.khalil.memo.security.jwt.AuthTokenFilter;
+import com.khalil.memo.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

@@ -1,12 +1,11 @@
 package com.khalil.memo.services;
 
-import com.sun.org.apache.xpath.internal.operations.Div;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.khalil.memo.models.Division;
 import com.khalil.memo.repositories.DivisionRepository;
-
-import java.util.List;
 
 @Service
 public class DivisionService {
